@@ -1,7 +1,7 @@
 name: 心理疗愈 7:30 发布
 on:
   schedule:
-    - cron: '30 7 * * *'  # 每天 07:30 (UTC+8)
+    - cron: '30 23 * * *'  # 北京时间 07:30 = UTC 前一天 23:30
   workflow_dispatch:
 
 jobs:
@@ -9,15 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - uses: actions/setup-python@v4
         with:
           python-version: '3.11'
-      
-      - name: Install dependencies
-        run: pip install requests
-      
+      - run: pip install requests
       - name: Run publish script
         env:
           YIXIAOER_API_KEY: ${{ secrets.YIXIAOER_API_KEY }}

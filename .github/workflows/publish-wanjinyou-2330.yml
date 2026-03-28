@@ -1,7 +1,7 @@
 name: 万金油大叔 23:30 发布
 on:
   schedule:
-    - cron: '30 23 * * *'
+    - cron: '30 15 * * *'  # 北京时间 23:30 = UTC 15:30
   workflow_dispatch:
 
 jobs:

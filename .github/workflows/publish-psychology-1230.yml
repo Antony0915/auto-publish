@@ -1,7 +1,7 @@
 name: 心理疗愈 12:30 发布
 on:
   schedule:
-    - cron: '30 12 * * *'
+    - cron: '30 4 * * *'  # 北京时间 12:30 = UTC 04:30
   workflow_dispatch:
 
 jobs:
