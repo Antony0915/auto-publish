@@ -203,7 +203,7 @@ def get_topic_for_slot(time_slot):
     topics = config["topics"]
     
     # 读取话题使用记录
-    topic_file = os.path.expanduser("~/.qclaw/workspace/auto-publish/topic_history.json")
+    topic_file = os.path.join(WORKSPACE, "auto-publish/topic_history.json")
     topic_history = {}
     if os.path.exists(topic_file):
         try:
