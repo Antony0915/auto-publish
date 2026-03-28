@@ -4,6 +4,7 @@
 邮件发送脚本 - 用于定时任务通知
 """
 
+import os
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
